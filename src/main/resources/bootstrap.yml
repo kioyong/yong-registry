@@ -1,0 +1,15 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: yong-registry
+
+eureka:
+  instance:
+     leaseRenewalIntervalInSeconds: 10
+  client:
+    registryFetchIntervalSeconds: 5
+#    注册表读取间隔秒
+    register-with-eureka: false
+    fetch-registry: false
