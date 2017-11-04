@@ -7,9 +7,9 @@ spring:
 
 eureka:
   instance:
-     leaseRenewalIntervalInSeconds: 10
+    hostname: localhost
   client:
-    registryFetchIntervalSeconds: 5
-#    注册表读取间隔秒
-    register-with-eureka: false
-    fetch-registry: false
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
